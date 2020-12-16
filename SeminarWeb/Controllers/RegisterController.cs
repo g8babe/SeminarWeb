@@ -144,7 +144,7 @@ namespace SeminarWeb.Controllers
         public JsonResult CheckValidUser(T_USER_DATA model)
         {
             string result = "Fail";
-            var DataItem = db.T_USER_DATA.Where(x => x.Email == model.Email && x.Password == model.Password).SingleOrDefault();
+            var DataItem = db.T_USER_DATA.Where(x => x.UserID == model.UserID && x.Password == model.Password).SingleOrDefault();
             if (DataItem != null)
             {
                 Session["ID"] = DataItem.ID.ToString();
