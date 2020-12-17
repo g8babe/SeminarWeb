@@ -15,12 +15,11 @@ namespace SeminarWeb.Models
     public partial class T_LOGIN_QR
     {
         public string UserID { get; set; }
-        public int LoginNo { get; set; }
         public string IMEI { get; set; }
         public string QRCode { get; set; }
         public System.DateTime Time { get; set; }
         public Nullable<bool> Isvalid { get; set; }
     
-        public virtual T_LOGIN_DATA T_LOGIN_DATA { get; set; }
+        public virtual T_USER_DATA T_USER_DATA { get; set; }
     }
 }

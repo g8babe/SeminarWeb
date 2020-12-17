@@ -25,10 +25,10 @@ namespace SeminarWeb.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<T_USER_DV> T_USER_DV { get; set; }
+        public virtual DbSet<T_USER_DATA> T_USER_DATA { get; set; }
         public virtual DbSet<T_LOGIN_CODE> T_LOGIN_CODE { get; set; }
         public virtual DbSet<T_LOGIN_DATA> T_LOGIN_DATA { get; set; }
         public virtual DbSet<T_LOGIN_QR> T_LOGIN_QR { get; set; }
-        public virtual DbSet<T_USER_DV> T_USER_DV { get; set; }
-        public virtual DbSet<T_USER_DATA> T_USER_DATA { get; set; }
     }
 }

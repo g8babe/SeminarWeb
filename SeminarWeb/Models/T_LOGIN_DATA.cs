@@ -15,13 +15,10 @@ namespace SeminarWeb.Models
     public partial class T_LOGIN_DATA
     {
         public string UserID { get; set; }
-        public int LoginNo { get; set; }
         public string IMEI { get; set; }
         public System.DateTime LoginTime { get; set; }
         public string LoginWeb { get; set; }
     
-        public virtual T_LOGIN_CODE T_LOGIN_CODE { get; set; }
-        public virtual T_LOGIN_QR T_LOGIN_QR { get; set; }
         public virtual T_USER_DATA T_USER_DATA { get; set; }
     }
 }

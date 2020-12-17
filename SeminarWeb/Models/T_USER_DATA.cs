@@ -17,8 +17,10 @@ namespace SeminarWeb.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public T_USER_DATA()
         {
-            this.T_LOGIN_DATA = new HashSet<T_LOGIN_DATA>();
             this.T_USER_DV = new HashSet<T_USER_DV>();
+            this.T_LOGIN_CODE = new HashSet<T_LOGIN_CODE>();
+            this.T_LOGIN_DATA = new HashSet<T_LOGIN_DATA>();
+            this.T_LOGIN_QR = new HashSet<T_LOGIN_QR>();
         }
     
         public int ID { get; set; }
@@ -31,8 +33,12 @@ namespace SeminarWeb.Models
         public Nullable<System.DateTime> ValidTime { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T_USER_DV> T_USER_DV { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T_LOGIN_CODE> T_LOGIN_CODE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T_LOGIN_DATA> T_LOGIN_DATA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T_USER_DV> T_USER_DV { get; set; }
+        public virtual ICollection<T_LOGIN_QR> T_LOGIN_QR { get; set; }
     }
 }
